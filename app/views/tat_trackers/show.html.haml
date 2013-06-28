@@ -6,7 +6,7 @@
 
 %p
   %strong Picture:
-  = @tat_tracker.picture 
+  = image_tag(@tat_tracker.picture_url) if @tat_tracker.picture.present?
 
 %p
   %strong Date inked:
