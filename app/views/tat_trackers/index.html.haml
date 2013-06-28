@@ -1,0 +1,36 @@
+%h1 Add Your Tat
+
+%table
+  %tr
+    %th Username
+    %th Picture
+    %th Date inked
+    %th Inspiration
+    %th Location on body
+    %th Artist name
+    %th Artist location
+    %th Artist email
+    %th Artist twitter
+    %th Artist phone
+    %th
+    %th
+    %th
+  
+
+  -@tat_trackers.each do |tat_tracker| 
+    %tr
+      %td= tat_tracker.username 
+      %td= tat_tracker.picture 
+      %td= tat_tracker.date_inked 
+      %td= tat_tracker.inspiration 
+      %td= tat_tracker.location_on_body 
+      %td= tat_tracker.artist_name 
+      %td= tat_tracker.artist_location 
+      %td= tat_tracker.artist_email 
+      %td= tat_tracker.artist_twitter 
+      %td= tat_tracker.artist_phone 
+      %td= link_to 'Show', tat_tracker 
+      %td= link_to 'Edit', edit_tat_tracker_path(tat_tracker) 
+      %td= link_to 'Delete', tat_tracker, method: :delete, data: { confirm: 'Are you sure? That shit is permanent' } 
+ 
+= link_to 'Add A Tat', new_tat_tracker_path 

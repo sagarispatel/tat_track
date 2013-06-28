@@ -1,0 +1,49 @@
+%p#notice.flash-message=notice
+
+%p
+  %strong Username:
+  = @tat_tracker.username 
+
+%p
+  %strong Picture:
+  = @tat_tracker.picture 
+
+%p
+  %strong Date inked:
+  = @tat_tracker.date_inked 
+
+%p
+  %strong Inspiration:
+  = @tat_tracker.inspiration 
+
+%p
+  %strong Location on body:
+  = @tat_tracker.location_on_body 
+
+%p
+  %strong Artist name:
+  = @tat_tracker.artist_name 
+
+%p
+  %strong Artist location:
+  = @tat_tracker.artist_location 
+
+%p
+  %strong Artist email:
+  = @tat_tracker.artist_email 
+
+%p
+  %strong Artist twitter:
+  = @tat_tracker.artist_twitter 
+
+%p
+  %strong Artist phone:
+  = @tat_tracker.artist_phone 
+
+||
+= link_to 'Edit', edit_tat_tracker_path(@tat_tracker)  
+||
+= link_to 'Back', tat_trackers_path
+||
+= link_to 'Delete', @tat_tracker, method: 'delete', data: { confirm: 'Are you sure? You cant delete a tat in real life.' } 
+||
