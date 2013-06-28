@@ -1,4 +1,7 @@
 TatTrack::Application.routes.draw do
+  resources :tat_trackers
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

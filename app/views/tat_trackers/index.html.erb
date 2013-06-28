@@ -1,0 +1,41 @@
+<h1>Listing tat_trackers</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Picture</th>
+    <th>Date inked</th>
+    <th>Inspiration</th>
+    <th>Location on body</th>
+    <th>Artist name</th>
+    <th>Artist location</th>
+    <th>Artist email</th>
+    <th>Artist twitter</th>
+    <th>Artist phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tat_trackers.each do |tat_tracker| %>
+  <tr>
+    <td><%= tat_tracker.username %></td>
+    <td><%= tat_tracker.picture %></td>
+    <td><%= tat_tracker.date_inked %></td>
+    <td><%= tat_tracker.inspiration %></td>
+    <td><%= tat_tracker.location_on_body %></td>
+    <td><%= tat_tracker.artist_name %></td>
+    <td><%= tat_tracker.artist_location %></td>
+    <td><%= tat_tracker.artist_email %></td>
+    <td><%= tat_tracker.artist_twitter %></td>
+    <td><%= tat_tracker.artist_phone %></td>
+    <td><%= link_to 'Show', tat_tracker %></td>
+    <td><%= link_to 'Edit', edit_tat_tracker_path(tat_tracker) %></td>
+    <td><%= link_to 'Destroy', tat_tracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tat tracker', new_tat_tracker_path %>
